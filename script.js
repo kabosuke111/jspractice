@@ -66,7 +66,7 @@ addEventListener ("DOMContentLoaded", function() {
     let text;
     let num = 0;
     let innum = 0;
-    let box = document.getElementById('content__box');
+    const box = document.getElementById('content__box');
     const name = ['hikasa', 'sugai', 'morimoto', 'matsuhuji', 'ishiguro'];
     const tagArray = ['h2','p','button','img','time','p','p'];
     const classArray = ['title','author','category','image','date','text','like'];
@@ -94,7 +94,7 @@ addEventListener ("DOMContentLoaded", function() {
                 text = articleList[innum].category;
             break;
             case 1:
-                text = 'by ' + articleList[innum].author;//objArray[num];
+                text = 'by ' + articleList[innum].author;
             break;
             case 0:
                 text = articleList[innum].title
@@ -122,8 +122,8 @@ addEventListener ("DOMContentLoaded", function() {
                 };
             }
             innum++;
-            }
         }
+    }
     articleBox();
     
 
