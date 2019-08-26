@@ -1,0 +1,206 @@
+@charset "UTF-8";
+/* CSS Document */
+
+@font-face {
+    font-family: "wakuwaku";
+    src: url('fonts/mini-wakuwaku-maru.otf');
+}
+
+@font-face {
+    font-family: "round";
+    src: url('fonts/MPLUSRounded1c-Regular.ttf');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-weight: 300;
+    font-size: 1.2rem;
+    font-family: 'round', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#app {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#header {
+    line-height: 1.0;
+    padding: 51px 0;
+    background: url("images/back.jpg");
+}
+
+#main {
+    margin: 50px auto;
+}
+
+.site__title {
+    font-size: 6.9rem;
+    font-family: 'wakuwaku';
+    text-align: center;
+    color: #fff;
+    
+}
+
+#content__box {
+    
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+[class^="content__item"] {
+    width: 332px;
+    height: 268px;
+    margin: 20px;
+    box-shadow: 2px 2px 4px 2px #aaa;
+    position: relative;
+}
+
+.title {
+    margin-top: 8px;
+    padding: 10px;
+    font-size: 2.0rem;
+    line-height: 1;
+    color: #FFFFFF;
+    font-family: 'round', sans-serif;
+}
+
+/*
+.article__title::after {
+    content: "";
+    display: block;
+    width: 13px;
+    height: 34px;
+    background: url('images/dott.png') repeat;
+    margin: 3px 7px 3px 3px;
+}
+*/
+
+.content__item--hikasa .title {background: #17acff;}
+.content__item--sugai .title {background: #83f293;}
+.content__item--morimoto .title {background: #ff459d;}
+.content__item--matsuhuji .title {background: #ffc445;}
+.content__item--ishiguro .title {background: #9d73ff;}
+
+.image {
+    display: block;
+    width: 136px;
+    height: 137px;
+    position: absolute;
+    top: 80px;
+    left: 170px;
+}
+
+.author {
+    width: 141px;
+    position: absolute;
+    bottom: 15px;
+    right: 0;
+    font-size: 1.5rem;
+    color: #919191;
+    border: solid 1px #919191;
+    border-right: none;
+    padding: 2px;
+    line-height: 1.0;
+}
+
+.category {
+    display: block;
+    margin: 8px 10px;
+    width: 58px;
+    border-radius: 20px;
+    text-align: center;
+    background: #ff457a;
+    font-size: 1.2rem;
+    color: #fff;
+    outline: none;
+    border: solid 1px #ff457a;
+    transition: 0.4s ease-out;
+}
+
+.category:hover {
+    background: #fff;
+    border: solid 1px #ff457a;
+    color: #ff457a;
+}
+
+.date {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: -1px;
+}
+
+.date::before {
+    content: "";
+    width: 10px;
+    margin-left: 3px;
+    display: inline-block;
+    border-top: solid 6px transparent;
+    border-left: solid 7px #ff457a;
+    border-right: solid 3px transparent;
+    border-bottom: solid 6px transparent;
+}
+
+.text {
+    width: 140px;
+    margin: 2px 0 0 15px;
+    line-height: 1.8;
+}
+
+.like {
+    background: url('images/heart.png');
+    width: 76px;
+    height: 64px;
+    padding: 18px 0;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    margin: 12px 10px;
+}
+
+.like:hover {
+    transition: 0.8s ease-out;
+    transform: rotate3d(0,2,0,360deg);
+    cursor: pointer;
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
