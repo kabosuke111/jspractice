@@ -98,11 +98,11 @@ a {
 }
 */
 
-.content__item--hikasa .title {background: #17acff;}
-.content__item--sugai .title {background: #83f293;}
-.content__item--morimoto .title {background: #ff459d;}
-.content__item--matsuhuji .title {background: #ffc445;}
-.content__item--ishiguro .title {background: #9d73ff;}
+.content__item--ohi .title {background: #17acff;}
+.content__item--guy .title {background: #83f293;}
+.content__item--molly .title {background: #ff459d;}
+.content__item--fuji .title {background: #ffc445;}
+.content__item--ishi .title {background: #9d73ff;}
 
 .image {
     display: block;
@@ -149,18 +149,25 @@ a {
 .date {
     display: inline-block;
     margin-left: 10px;
-    vertical-align: -1px;
+    width: 150px;
 }
 
 .date::before {
     content: "";
     width: 10px;
-    margin-left: 3px;
+    margin: 2px 0 0 3px;
     display: inline-block;
+    float: left;
     border-top: solid 6px transparent;
     border-left: solid 7px #ff457a;
     border-right: solid 3px transparent;
     border-bottom: solid 6px transparent;
+}
+
+.date::after {
+    content: "";
+    display: block;
+    clear: both;
 }
 
 .text {
