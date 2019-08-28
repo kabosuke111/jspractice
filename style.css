@@ -87,22 +87,13 @@ a {
     font-family: 'round', sans-serif;
 }
 
-/*
-.article__title::after {
-    content: "";
-    display: block;
-    width: 13px;
-    height: 34px;
-    background: url('images/dott.png') repeat;
-    margin: 3px 7px 3px 3px;
-}
-*/
-
 .content__item--ohi .title {background: #17acff;}
 .content__item--guy .title {background: #83f293;}
 .content__item--molly .title {background: #ff459d;}
 .content__item--fuji .title {background: #ffc445;}
 .content__item--ishi .title {background: #9d73ff;}
+.content__item--Null {box-shadow: none;height: 0;}
+.content__item--Null .title,.content__item--Null .author,.content__item--Null .image,.content__item--Null .category,.content__item--Null .text,.content__item--Null .date,.content__item--Null .like{display:none}
 
 .image {
     display: block;
@@ -194,7 +185,11 @@ a {
     outline: none;
 }
 
-
+@media (max-width: 758px) {
+    .content__item--Null {
+        display: none;
+    }
+}
 
 
 

@@ -58,12 +58,8 @@ addEventListener ("DOMContentLoaded", () => {
     const box = document.getElementById('content__box');
     const element = articleBox();
 
-
     box.appendChild(element);
 });
-
-
-
 
 const articleMain = (tag,cname, articleid, count) => {
     const innerElem = document.createElement(tag);
@@ -81,8 +77,10 @@ const articleMain = (tag,cname, articleid, count) => {
         break;
         case 3:
             text = articleList[articleid].image;
-            innerElem.setAttribute('src', `images/${text}`);
-            innerElem.setAttribute('draggable', 'false');
+            if(articleid  !== articleList.length){
+                innerElem.setAttribute('src', `images/${text}`);
+                innerElem.setAttribute('draggable', 'false');
+            } 
             break;
         case 2:
             text = articleList[articleid].category;
@@ -105,8 +103,30 @@ const articleBox = ()=> {
     const tagArray = ['h2','p','button','img','time','p','p'];
     const classArray = ['title','author','category','image','date','text','like'];
     const flagment = document.createDocumentFragment();
-
-    for(let i = 0; i < articleList.length; i++) {
+    const addList = ((number) => {
+        const addTimes = (() => {
+            switch(articleList.length % 3) {
+                case 2:
+                    return 1;
+                    break;
+                case 1:
+                    return 2;
+                    break;
+                default: 
+                    return 1;
+                    break;
+            }
+        })();
+        
+        for (let i = 0; i < addTimes; i++){
+            articleList.push({title: null, author: null, name: "Null", date: null, image: null, category: null, text: null, like: null});
+        };
+    
+        number = articleList.length;
+        return number;
+    })();
+    
+    for(let i = 0; i < addList; i++) {
         const elem = document.createElement('article');
         elem.setAttribute('class',`content__item--${articleList[i]["name"]}`);
 
@@ -117,19 +137,8 @@ const articleBox = ()=> {
         flagment.appendChild(elem);
         
     }
-    console.log(flagment);
     return flagment;
 }
-
-
-
-
-
-
-
-
-
-
 
 //// JavaScript Document
 ////onload = function() {
